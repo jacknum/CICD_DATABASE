@@ -18,5 +18,11 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          script: 
+          script: |
             echo "Berhasil Konek ke Server"
+
+            cd /home/jack/CICD_DATABASE
+            echo "Berhasil masuk ke direktori CICD_DATABASE"
+
+            docker compose up -d 
+            echo "Berhasil menjalankan Docker Compose"
