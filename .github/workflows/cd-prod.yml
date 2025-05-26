@@ -30,3 +30,11 @@ jobs:
               echo "Gagal Masuk ke Folder CICD_Database"
             fi
             
+            if [ -d ".git"]; then
+              echo "Ada folder .git, melakukan git pull..."
+              git remote set-url origin https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PAT }}@github.com/${{ secrets.GIT_USERNAME }}/CICD_Database.git
+              git pull origin main
+            else
+              echo "Gak ada folder .gi, melakukan git clone..."
+              git clone https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PAT }}@github.com/${{ secrets.GIT_USERNAME }}/CICD_Database.git
+            fi
