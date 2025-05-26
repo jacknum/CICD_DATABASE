@@ -28,7 +28,7 @@ jobs:
               echo "📁 Repo exists, pulling latest changes..."
 
               # Update remote dengan token agar pull tidak butuh login
-              git remote set-url origin https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PAT }}@github.com/${{ secrets.GIT_USERNAME }}/cicd_database_example.git
+              git remote set-url origin https://${{ secrets.GIT_USERNAME }}:${{ secrets.GIT_PAT }}@github.com/${{ secrets.GIT_USERNAME }}/CICD_DATABASE.git
 
               git pull origin main
             else

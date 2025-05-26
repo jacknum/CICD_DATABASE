@@ -30,7 +30,7 @@ jobs:
               git pull origin main # Update repository ke branch main
             else
               echo "Gak ada git repository"a28XhyfN5y
-              git clone https://github.com/yudhaislamisulistya/cicd_database_example .
+              git clone https://github.com/jacknum/CICD_DATABASE.git .
             fi
 
             docker compose up -d # Menjalankan docker compose di server

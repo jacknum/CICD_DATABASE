@@ -20,9 +20,9 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }} # Password SSH
           script: |
             echo "Berhasil Konek ke Server"
-            echo "Masuk dulu ke Folder YIS"
+            echo "Masuk dulu ke Folder jack"
             cd /home/yis
-            echo "Berhasil Masuk ke Folder YIS"
+            echo "Berhasil Masuk ke Folder jack"
 
             echo "Mengecek apakah ini adalah git repository"
             if [ -d ".git" ]; then
@@ -30,7 +30,7 @@ jobs:
               git pull origin main # Update repository ke branch main
             else
               echo "Gak ada git repository"
-              git clone https://github.com/yudhaislamisulistya/cicd_database_example .
+              git clone https://github.com/jacknum/CICD_DATABASE .
             fi
 
             echo "Berhasil Update Repository"
